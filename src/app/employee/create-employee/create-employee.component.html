@@ -1,0 +1,58 @@
+<div class="container">
+    <form class="form-horizontal" #f="ngForm" (ngSubmit)="submitEmployee(f)" novalidate>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="pwd">Firstname:</label>
+        <div class="col-sm-2">          
+          <input type="text" class="form-control" id="firstname" placeholder="Firstname" name="firstname" ngModel>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="pwd">Lastname:</label>
+        <div class="col-sm-2">          
+          <input type="text" class="form-control" id="lastname" placeholder="Lastname" name="lastname" ngModel>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="pwd">Age:</label>
+        <div class="col-sm-2">          
+          <input type="text" class="form-control" id="age" placeholder="Age" name="age" ngModel>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="pwd">Address Line1:</label>
+        <div class="col-sm-2">          
+          <input type="text" class="form-control" id="addressline1" placeholder="Address line 1" name="addressline1" ngModel>
+        </div>
+      </div>
+      <div class="form-group">
+          <label class="control-label col-sm-2" for="pwd">Address Line2:</label>
+          <div class="col-sm-2">          
+            <input type="text" class="form-control" id="addressline2" placeholder="Address line 2" name="addressline2" ngModel>
+          </div>
+        </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="pwd">City:</label>
+        <div class="col-sm-2">          
+          <input type="text" class="form-control" id="city" placeholder="City" name="city" ngModel>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="pwd">State:</label>
+        <div class="col-sm-2">          
+          <input type="text" class="form-control" id="state" placeholder="State" name="state" ngModel>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="pwd">Country:</label>
+        <div class="col-sm-2">          
+          <input type="text" class="form-control" id="country" placeholder="Country" name="country" ngModel>
+        </div>
+      </div>
+      <div class="form-group">        
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-default">Submit</button>
+        </div>
+      </div>
+    </form>
+</div>
+
