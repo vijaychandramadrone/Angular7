@@ -1,6 +1,6 @@
 <div class="container">
-    <form class="form-horizontal" #f="ngForm" (ngSubmit)="submitEmployee(f)" novalidate>
-      <div class="form-group">
+    <form class="form-horizontal" #f="ngForm" (ngSubmit)="confirmEmployee(f)" novalidate>
+      <!--<div class="form-group">
         <label class="control-label col-sm-2" for="pwd">Firstname:</label>
         <div class="col-sm-2">          
           <input type="text" class="form-control" id="firstname" placeholder="Firstname" name="firstname" ngModel>
@@ -46,6 +46,24 @@
         <label class="control-label col-sm-2" for="pwd">Country:</label>
         <div class="col-sm-2">          
           <input type="text" class="form-control" id="country" placeholder="Country" name="country" ngModel>
+        </div>
+      </div> -->
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="pwd">Name:</label>
+        <div class="col-sm-2">          
+          <input type="text" class="form-control" id="name" placeholder="name" name="name" ngModel>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="pwd">Age:</label>
+        <div class="col-sm-2">          
+          <input type="text" class="form-control" id="age" placeholder="age" name="age" ngModel>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="pwd">Salary:</label>
+        <div class="col-sm-2">          
+          <input type="text" class="form-control" id="salary" placeholder="salary" name="salary" ngModel>
         </div>
       </div>
       <div class="form-group">        

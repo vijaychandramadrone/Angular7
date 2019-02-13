@@ -20,9 +20,10 @@ export class CreateEmployeeComponent implements OnInit {
     console.log('Inside CreateEmployeeComponent');
    }
 
-   submitEmployee (f: NgForm){
+   confirmEmployee (f: NgForm){
     this.data = f.value;
     this.messageService.sendMessage(this.data);
+    sessionStorage.setItem("createEmployee", JSON.stringify(this.data));
     this.router.navigate(["/confirmEmployee"]); 
      
    }

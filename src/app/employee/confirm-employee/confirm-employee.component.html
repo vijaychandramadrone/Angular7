@@ -1,3 +1,30 @@
-<p>
-  confirm-employee works!
-</p>
+<div class="container">
+    <div class="alert alert-success" *ngIf="employeeData.id">
+        <strong>Success!</strong> Employee saved successfully.
+    </div>
+    <form class="form-horizontal" #f="ngForm" (ngSubmit)="submitEmployee()" novalidate>
+      <div class="form-group">
+        <label class="control-label col-sm-2">Name:</label>
+        <div class="col-sm-2">          
+          <label class="control-label col-sm-2">{{employeeData.name}}</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="pwd">Age:</label>
+        <div class="col-sm-2">          
+            <label class="control-label col-sm-2">{{employeeData.age}}</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="pwd">Salary:</label>
+        <div class="col-sm-2">          
+            <label class="control-label col-sm-2">{{employeeData.salary}}</label>
+        </div>
+      </div>
+      <div class="form-group" *ngIf="!employeeData.id">        
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-default">Submit</button>
+        </div>
+      </div>
+    </form>
+</div>
