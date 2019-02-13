@@ -1,3 +1,25 @@
-<p>
-  list-employee works!
-</p>
+<div class="container"> 
+    <div class="panel panel-default">
+      <div class="panel-body">List First: <input type="text" id="count" placeholder="Enter number" name="count" 
+        [(ngModel)]="count" (blur)="fetchData(count)"> Employee(s)
+      </div>
+    </div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>Age</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of duplicateEmpListObject">
+        <td>{{emp.id}}</td>
+        <td>{{emp.employee_name}}</td>
+        <td>{{emp.employee_salary}}</td>
+        <td>{{emp.employee_age}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

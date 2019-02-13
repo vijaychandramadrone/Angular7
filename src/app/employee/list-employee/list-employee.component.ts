@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MessageService } from '../../app.message.service';
 import { EmployeeServiceService } from '../../employee/employee-service.service';
 import { Subscription } from 'rxjs';
+import { AngularWaitBarrier } from 'blocking-proxy/built/lib/angular_wait_barrier';
 
 @Component({
   selector: 'app-list-employee',
@@ -12,6 +13,8 @@ export class ListEmployeeComponent implements OnInit {
  employeeData : any;
  subscription: Subscription;
  allEmployeesData : any;
+ duplicateEmpListObject:any;
+
   constructor(private messageService:MessageService, private empService: EmployeeServiceService ) { 
     console.log('Inside list EmployeeComponent');
   }
@@ -24,8 +27,18 @@ export class ListEmployeeComponent implements OnInit {
     });
 
     this.empService.getEmployees().subscribe((data: {}) => {
-      console.log(data);
       this.allEmployeesData = data;
+      this.duplicateEmpListObject = JSON.parse(JSON.stringify(this.allEmployeesData));
     });
+  }
+
+  fetchData ( a:number) {
+    if(this.duplicateEmpListObject.length !== this.allEmployeesData.length) {
+      this.duplicateEmpListObject = JSON.parse(JSON.stringify(this.allEmployeesData));
+    }
+    for(var i = 0; i<this.allEmployeesData.length; i++) {
+      this.duplicateEmpListObject.splice(a,(this.allEmployeesData.length - a));
+    }
+
   }
 }
